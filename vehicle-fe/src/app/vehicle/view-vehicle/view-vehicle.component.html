@@ -1,0 +1,25 @@
+<h2>View Vehicles</h2>
+<h3><button class="btn btn-primary" [routerLink]="['/addVehicle']">Add Vehicle</button></h3>
+<table class="table">
+    <tr>
+        <th>Year</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Edit</th>
+        <th>delete</th>
+    </tr>
+    <tr *ngFor="let data of VehicleData; index as i">
+        <td>{{data?.year}}</td>
+        <td>{{data?.make}}</td>
+        <td>{{data?.model}}</td>
+        <td><button [routerLink]="['/editVehicle', data._id]">
+                edit
+            </button></td>
+        <td>
+            <button (click)="deleteVehicle(data?._id)" class="delete">
+                delete
+            </button>
+        </td>
+
+    </tr>
+</table>

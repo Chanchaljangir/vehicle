@@ -1,0 +1,44 @@
+<form [formGroup]="vehicleForm">
+    <div class="row-2-col">
+        <h2 class="heading-2 mb30">Add Vehicle</h2>
+    </div>
+    <div class=" row-2-col">
+        <div class="form-group mb25">
+            <label class="label-heading">Year</label>
+            <sup class="text-danger">*</sup>
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="year" placeholder="Enter year">
+                <span class="msg-error d-none"></span>
+            </div>
+        </div>
+
+    </div>
+    <div class=" row-2-col">
+        <div class="form-group mb-0">
+            <label class="label-heading">Make
+            </label>
+            <sup class="text-danger">*</sup>
+            <div class="input-group ">
+                <input type="text" class="form-control" placeholder="Enter make" formControlName="make">
+                <span class="msg-error d-none"></span>
+            </div>
+        </div>
+        <div class="form-group mb-0">
+            <label class="label-heading">Model
+            </label>
+            <sup class="text-danger">*</sup>
+            <div class="input-group ">
+                <input type="text" class="form-control" placeholder="Enter model" formControlName="model">
+                <span class="msg-error d-none"></span>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <div class="row-2-col">
+        <div class="form-group mb-0 ml30">
+            <button type="button" class="btn1" (click)="onSubmit(vehicleForm.value)">Submit
+            </button>
+        </div>
+    </div>
+</form>
